@@ -1,0 +1,257 @@
+@charset "utf-8";
+/* CSS Document */
+.center{
+	display:block;
+	
+}
+
+html {
+    background: #fafafa;
+    font-family:  Roboto, sans-serif;
+}
+
+.field {
+	border: 3px solid #000000;
+	width: 960px;
+}
+
+
+.container {
+	width: 960px;
+	height: 1000;
+	margin: 0 auto;
+}
+
+nav {
+	width: 960px;
+    margin: 0;
+    overflow: hidden;
+    background: #333333;
+
+}   
+
+.nav-content {
+    max-width: 960px;
+    margin: 960;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-content a {
+    display: block;
+    font-size: 14px;
+    line-height: 44px;
+    text-decoration: none;
+    transition: all 0.3s;
+    color: #ffffff;
+}
+
+.nav-content a:hover,
+.nav-icon:hover,
+.search-icon:hover {
+    opacity: 0.7;
+}
+
+.nav-links {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav-icon {
+    display: none;
+    grid-gap: 5px;
+    grid-template-columns: auto;
+    padding: 17px 0;
+    height: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.bar {
+    height: 1px;
+    width: 18px;
+    background: white;
+    transition: 0.5s;
+}
+
+.search-icon {
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+@media (max-width: 960px) {
+
+    .nav-links {
+        position: fixed;
+        top: 44px;
+        right: 0;
+        height: 0;
+        width: 960;
+        background: #333333;
+        flex-direction: column;
+        justify-content: flex-start;
+        transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    .show .nav-links {
+        height: 100%;
+    }
+
+    .nav-links a {
+        height: 0;
+        width: 0;
+        opacity: 0;
+        overflow: hidden;
+        margin-right: 25px;
+        margin-left: 25px;
+        transition: opacity 1.5s, height 2s;
+    }
+        
+    .show .nav-links a {
+        opacity: 1;
+        width: auto;
+        height: auto;
+    }
+   
+    .nav-icon {
+        order: 1;
+        display: grid;
+    }
+
+    .logo {
+        order: 2;
+    }
+
+    .search-icon {
+        order: 3;
+    }
+
+}
+
+.show .one {
+    transform: rotate(45deg) translateY(5.5px);
+}
+
+.show .two {
+    transform: rotate(-45deg) translateY(-5.5px);
+}
+
+.content {
+    max-width: 1024px;
+    min-height: 380px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+html, body {
+	height:100%;
+}
+
+body {display: flex;
+flex-direction: column;
+}
+
+.container {
+	flex: 1 0 auto;
+}
+
+.site-footer
+{
+  background-color:#26272b;
+  padding:50px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  margin-top: 100px;
+  color:#737373;
+  flex-shrink: 0;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:1366px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:1366px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer 
+  {
+    text-align:center
+  }
+}
+
+header {
+	background-color: #26272b;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+    backface-visibility: hidden;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  white-space: nowrap;
+  background: #fff;
+  border-radius: 100px;
+  border: 4px solid #000000;
+  border-width: 4px 4px 4px 4px;
+  padding: 5px 20px 5px 20px;
+    color: #000000;
+  font-size: 16px;
+  font-family: Helvetica Neue;
+  font-weight: 900;
+  font-style: normal
+  }
+  .button > div {
+    color: #999;
+  font-size: 10px;
+  font-family: Helvetica Neue;
+  font-weight: initial;
+  font-style: normal;
+  text-align: center;
+  margin: 0px 0px 0px 0px
+  }
+  .button > i {
+    font-size: 1em;
+  border-radius: 0px;
+  border: 0px solid transparent;
+  border-width: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  position: static
+  }
+  .button > .ld {
+    font-size: initial
+  }
